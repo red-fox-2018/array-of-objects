@@ -1,25 +1,19 @@
+function createObj(name, phase, gender) {
+  let obj = {
+    name: name,
+    phase: phase,
+    gender: gender
+  }
+  return obj
+}
 function getData(name) {
-  let instructors = [{
-    name: 'Akbar',
-    phase: 1,
-    gender: 'male'
-  }, {
-    name: 'Icha',
-    phase: 1,
-    gender: 'female'
-  }, {
-    name: 'Adhit',
-    phase: 2,
-    gender: 'male'
-  }, {
-    name: 'Tama',
-    phase: 2,
-    gender: 'male'
-  }, {
-    name: 'Rifky',
-    phase: 3,
-    gender: 'male'
-  }];
+  let instructors =[
+                    createObj('Akbar', 1, 'male'), 
+                    createObj('Icha', 1, 'female'), 
+                    createObj('Adhit', 2, 'male'), 
+                    createObj('Tama', 2, 'male'), 
+                    createObj('Rifky', 3, 'male')
+                   ];
   for (let i = 0; i < instructors.length; i++) {
     if (instructors[i].name.toLowerCase() === name.toLowerCase()) {
       return instructors[i];
